@@ -25,6 +25,9 @@ const App = () => {
   const [country, setCountry] = useState('');
   const [avatarUrl, setAvatarUrl] = useState('');
 
+  const fullName = joinNames([givenName, surname]);
+  const streetAddress = joinNames([houseName, street]);
+
   const handleImageUpload = (e) => {
     e.preventDefault();
     const imageFile = e.target.files[0]
@@ -60,7 +63,6 @@ const App = () => {
           country={country}
           onCountryChange={setValues(setCountry)}
           handleFileUpload = {handleImageUpload}    
-        
             />
       </div>
     </div>
@@ -68,10 +70,10 @@ const App = () => {
       <div className={styles.preview}>
         <h2 className={styles.title}>HCARD PREVIEW</h2>
             <HCardPreview
-             fullName={joinNames([givenName, surname])}
+             fullName={fullName}
              email={email}
              phoneNumber={phoneNumber}
-             streetAddress={joinNames([houseName, street])}
+             streetAddress={streetAddress}
              suburb={suburb}
              state={countryState}
              postcode={postcode}
