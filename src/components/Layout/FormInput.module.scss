@@ -1,0 +1,21 @@
+@import "../../partials/color_palette";
+
+.layout{
+  flex-direction: column;
+  display: flex;
+}
+
+.input {
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  font-size: 1em;
+  font-family: 'Merriweather', serif;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.label {
+  padding-bottom: 5px;
+  color: $black;
+  font-size: 0.8em;
+}
+

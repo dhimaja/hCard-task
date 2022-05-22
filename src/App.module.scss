@@ -1,0 +1,64 @@
+@import "partials/color_palette";
+@import "partials/device_responsiveness";
+
+.container-panel {
+  display: grid;
+  grid-template-areas: 'preview' 'form';
+  @include desktop {
+    grid-template-areas: 'form preview';
+  }
+  height:100%;
+}
+
+.panel {
+  display: flex;
+  justify-content: center;
+  flex: 0.5;
+  padding: 30px;
+  align-items: center;
+  height: 100%;
+}
+
+.heading {
+  font-weight: 400px;
+  font-size: 30px;
+}
+
+.form {
+  @extend .panel;
+  @include desktop {
+    justify-content: flex-start;
+  }
+  grid-area: form;
+}
+
+.form-container{
+  width: 100%;
+  @include desktop {
+    width: initial;
+  }
+}
+
+.preview-panel {
+  @extend .panel;
+  background-color: $white;
+  @include desktop {
+    justify-content: flex-end;
+  }
+  grid-area: preview;
+}
+
+.preview {
+  min-width: 360px;
+}
+
+.title {
+  color: $light-gray;
+  display: block;
+  font-family: sans-serif;
+  font-weight: 600px;
+  text-align: right;
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 1.5em;
+}

@@ -1,0 +1,27 @@
+@import "../../partials/color_palette";
+
+.button {
+  font-family: sans-serif;
+  color: white;
+  font-size: 1.25em;
+  padding: 10px 25px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+
+  &:active{
+    transform: translateY(2px);
+  }
+}
+
+.gray-button{
+  @extend .button;
+  background-color: $dark-gray;
+}
+
+.blue-button{
+  @extend .button;
+  box-shadow: 2px darken($sky-blue, 25%);
+  background-color: $sky-blue;
+}

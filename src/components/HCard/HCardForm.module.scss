@@ -1,0 +1,31 @@
+@import "../../partials/color_palette";
+@import "../../partials/device_responsiveness";
+
+.field-container {
+  border: 0;
+  margin-top: 28px;
+  padding: 0;
+}
+
+.details {
+  margin: 0 0 30px;
+  color: $light-gray;
+  font-size: 0.600em;
+  padding: 0;
+  border-bottom: 1px solid rgba($light-gray, 0.2);
+  display: block;
+  width: 100%;
+ 
+}
+
+.form-input-group {
+  grid-gap: 1em 1.8em;
+  display: grid;
+  @include desktop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  grid-template-columns: 2fr;
+}

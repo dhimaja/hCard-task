@@ -1,0 +1,17 @@
+// Min widths
+$desktop: 1100;
+$tablet: 768;
+
+@mixin tablet {
+  @media (min-width: #{$tablet}px ) and (max-width: #{$desktop}px){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media(min-width: #{$desktop}px){
+    @content;
+  }
+}
+
+
